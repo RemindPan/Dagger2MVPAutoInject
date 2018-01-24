@@ -88,6 +88,7 @@ public class AutoInjectProcessor extends AbstractProcessor{
         Set<Element> fragElements = new HashSet<>();
 
         for(Element element : elements){
+            //这里参见{@link Configuration}的ACTIVITY_TYPE的解释
             if(GeneratorUtils.isSubOfActivity(element.asType())){
                 activityElements.add(element);
             }else if(GeneratorUtils.isSubOfFragment(element.asType())){
